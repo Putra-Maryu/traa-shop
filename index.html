@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRAA SHOP - DIGITAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="png/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="png/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="png/favicon-16x16.png">
+    <link rel="manifest" href="png/site.webmanifest">
+    <link rel="stylesheet" href="link/style.css">
+</head>
+<body>
+    <!-- 
+Copyright (c) 2025 Traa Factory
+Lisensi: MIT 
+-->
+    <div class="navbar">
+        <h1>TRAA SHOP</h1>
+        <div class="search-box" id="searchBox">
+            <input type="text" id="desktopSearch" placeholder="Cari produk...">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+        </div>
+        <div class="bendera">
+            <img src="assets/indonesia.png" alt="ID" class="id-icon">
+            <span>ID</span>
+        </div>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="assets/20250204_040113.png" alt="Image 1" class="slide">
+            <img src="assets/20250204_040206.png" alt="Image 2" class="slide">
+            <img src="assets/20250204_040113.png" alt="Image 1" class="slide">
+            <img src="assets/20250204_040206.png" alt="Image 2" class="slide">
+        </div>
+        <button class="prev" onclick="movePrev()">&#10094;</button>
+        <button class="next" onclick="moveNext()">&#10095;</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="mobile-search-container" id="mobileSearch">
+        <input type="text" id="mobileSearchInput" placeholder="Cari produk...">
+    </div>
+
+    <div class="container">
+        <h3 class="fade-in">POPULER SEKARANG!</h3>
+        <p class="fade-in">Berikut adalah beberapa produk yang paling populer saat ini.</p>
+        <div class="products" id="digitalProducts">
+            <!-- Digital Products -->
+            <div class="product fade-in" data-title="Kami Menyediakan Beberapa Desain" data-description="Detail Proses Dan Lain-Lain Klik Tombol Dibawah!" data-image="assets/logo.png" data-category="digital" data-keywords="w, e, b, s, i, t, e, we, web, webs, websi, websit, website, t, e, m, a, te, tem, tema, te, tec, tech">
+                <img src="assets/logo.png" alt="Logo Traa">
+                <h3>Jasa Pembuatan Website</h3>
+                <p>Klik Untuk Detail!</p>
+            </div>
+            <div class="product fade-in" data-title="Kami Menyediakan Beberapa Digital Produk" data-description="Detail Lain-Lain Klik Tombol Dibawah!" data-image="assets/logo.png" data-category="digital" data-keywords="d, i, g, i, t, a, l, di, dig, digi, digit, digita, digital, p, r, o, d, u, k, pr, pro, prod, produ, produk, digitalproduk, digitalp, digitalpr, digitalpro, digitalprod, digitalprodu">
+                <img src="assets/logo.png" alt="Logo Traa">
+                <h3>Digital Produk</h3>
+                <p>Klik Untuk Detail!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <img id="modalImage" src="" alt="Product Image">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+            <button><a href="https://wa.me/6283804272709" target="_blank">Order Via WhatsApp</a></button>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="fade-in">DESAIN WEBSITE LAINNYA</h3>
+        <p class="fade-in">Berikut adalah beberapa desain website saat ini.</p>
+        <div class="products" id="websiteProducts">
+            <div class="product fade-in" data-title="Tech & Futuristic" data-description="Memiliki Kombinasi 2 Warna Yaitu Biru Tua & Cyan" data-image="assets/produk1.png" data-category="website" data-keywords="w, e, b, s, i, t, e, we, web, webs, websi, websit, website, t, e, m, a, te, tem, tema, te, tec, tech">
+                <img src="assets/produk1.png" alt="Website Biru Tua & Cyan">
+                <h3>Tech & Futuristic</h3>
+                <p>Klik Untuk Detail!</p>
+            </div>
+            <div class="product fade-in" data-title="Dark & UnguNeon" data-description="Memiliki Kombinasi 2 Warna Yaitu Hitam & Ungu Neon" data-image="assets/produk2.png" data-category="website" data-keywords="w, e, b, s, i, t, e, we, web, webs, websi, websit, website, t, e, m, a, te, tem, tema, d, a, r, k, da, dar, dark, u, n, g, u, un, ung, ungu, n, e, o, n, ne, neo, neon, darku, darkun, darkung, darkungu, darkungun, darkungune, darkunguneo, darkunguneon">
+                <img src="assets/produk2.png" alt="Website Hitam & Ungu">
+                <h3>Dark Ungu Neon</h3>
+                <p>Klik Untuk Detail!</p>
+            </div>
+            <div class="product fade-in" data-title="Hitam Emas Elegan" data-description="Memiliki Kombinasi 2 Warna Yaitu Hitam Emas Elegan" data-image="assets/produk3.png" data-category="website" data-keywords="w, e, b, s, i, t, e, we, web, webs, websi, websit, website, t, e, m, a, te, tem, tema, h, i, t, a, m, hi, hit, hita, hitam, e, m, a, s, em, ema, emas, e, l, e, g, a, n, el, ele, eleg, elega, elegan, hitame, hitamem, hitamema, hitamemas, hitamemase, hitamemasel, hitamemasele, hitamemaseleg, hitamemaselega, hitamemaselegan">
+                <img src="assets/produk3.png" alt="Website Hitam & Emas">
+                <h3>Hitam Emas Elegan</h3>
+                <p>Klik Untuk Detail!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="support">
+            <a href="https://wa.me/6283804272709" target="_blank">Whatsapp</a>
+            <a href="https://policies.google.com/privacy?hl=id" target="_blank">Kebijakan Privasi</a>
+            <a href="https://policies.google.com/privacy?hl=id" target="_blank">Syarat & Ketentuan</a>
+        </div>
+        <div class="legal">
+            <p>© 2025 TRAA FACTORY - TraaShop. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="link/script.js"></script>
+</body>
+</html>
